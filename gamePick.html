@@ -13,6 +13,7 @@
 
         console.log(23 + 97);
         
+
      
         let text = ["Rock", "Paper", "Scissors"];
         console.log(text) //using it to check//
@@ -37,18 +38,39 @@
         let testplayer = prompt("Enter Rock, Paper or Scissors");
         console.log(testplayer)
 
-        
         testplayer = testplayer.charAt(0).toUpperCase() + testplayer.slice(1).toLowerCase();
-        
+
+
+         switch(testplayer) {
+            case "Rock":
+                alert( 'You choose Rock' );
+                break;
+            case "Paper":
+                alert( 'You choose Paper' );
+                break;
+            case "Scissors":
+                alert( 'You choose Scissors' );
+                break;
+
+            default:
+                alert( 'Enter a valid word; Rock, Paper or Scissors' );
+                alert(prompt("Enter Rock, Paper or Scissors")); 
+                
+         }
+         
 
         function getHumanChoice() {
               return testplayer;    
         }
-
         console.log(testplayer)
 
+
+       
     
-    
+                    
+                    
+            
+
     </script>
     
     
