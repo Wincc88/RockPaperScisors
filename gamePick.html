@@ -13,38 +13,52 @@
 
         console.log(23 + 97);
         
-
+       /*
      
-        let text = ["Rock", "Paper", "Scissors"];
-        console.log(text) //using it to check//
+        let computerMove = ["Rock", "Paper", "Scissors"];
+        console.log(computerMove) //using it to check//
 
-        let length = text.length; //use to track for random &floor//
-        console.log(length)
+        let computerLength = computerMove.length; //use to track for random &floor//
+        console.log(computerLength)
 
-        let pick = Math.floor(Math.random() *text.length);
-        console.log(pick)
+        let computerPick = Math.floor(Math.random() *computerMove.length);
+        console.log(computerPick)
 
-        let pos = text[pick];
-        console.log(pos)
+        let computerPos = computerMove[computerPick];
+        console.log(computerPos)
 
 
 
         function getComputerChoice() {
 
-              return pos;
+              console.log(computerPos);
+              return computerPos;
         }
+        getComputerChoice(); //use it to call the function to check//
 
+        */
         
-        let testplayer = prompt("Enter Rock, Paper or Scissors");
-        console.log(testplayer)
+       
+          
+        let playerMove = prompt("Enter Rock, Paper or Scissors");
+        console.log(playerMove)
 
-        testplayer = testplayer.charAt(0).toUpperCase() + testplayer.slice(1).toLowerCase();
+        playerMove = playerMove.charAt(0).toUpperCase() + playerMove.slice(1).toLowerCase();
+        console.log(playerMove);
 
-
-         switch(testplayer) {
+         if (!(playerMove === "Rock" || playerMove === "Scissors" || playerMove === "Paper")) {
+            alert(prompt("Invalid Entry. Enter Rock, Paper or Scissors"));
+            
+         }
+      
+       
+        
+        /*    
+          switch(playerMove) {
             case "Rock":
                 alert( 'You choose Rock' );
                 break;
+               
             case "Paper":
                 alert( 'You choose Paper' );
                 break;
@@ -53,19 +67,21 @@
                 break;
 
             default:
-                alert( 'Enter a valid word; Rock, Paper or Scissors' );
-                alert(prompt("Enter Rock, Paper or Scissors")); 
-                
-         }
-         
-
-        function getHumanChoice() {
-              return testplayer;    
-        }
-        console.log(testplayer)
-
+                alert(prompt("Invalid Entry. Enter Rock, Paper or Scissors"));
         
+          }
+         */       
+       
 
+         
+        /*
+        function getHumanChoice() {
+              console.log(playerMove);
+              return playerMove;    
+        }
+        getHumanChoice();
+
+        */
 
        
     
