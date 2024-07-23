@@ -13,7 +13,7 @@
 
         console.log(23 + 97);
         
-       /*
+       
      
         let computerMove = ["Rock", "Paper", "Scissors"];
         console.log(computerMove) //using it to check//
@@ -36,7 +36,7 @@
         }
         getComputerChoice(); //use it to call the function to check//
 
-        */
+        
 
         
 
@@ -77,9 +77,39 @@
         getHumanChoice();
         console.log(`You chose ${playerMove}`)
         
+        
+        let humanScore = 0;
+        let computerScore = 0;
 
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+
+        function playRound(humanChoice, computerChoice) {
+            if (humanChoice === "Rock" && computerChoice === "Scissors") {
+                console.log("You Win! Rock beats Scissors");
+
+            } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
+                    console.log("Looooser! Scissors beats Paper");
+
+            } else if (humanChoice === "Paper" && computerChoice === "Rock") {
+                    console.log("You Win! Paper beats Rock");
+            
+            } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+                    console.log("You Win! Scissors beats Paper");
+            
+            } else if (humanChoice === "Scissors" && computerChoice === "Rock") {
+                    console.log("Looooser! Rock beats Scissors");
+
+            } else if (humanChoice === "Rock" && computerChoice === "Paper") {
+                    console.log("Looooser! Paper beats Rock");
+                
+            } else if (humanChoice === computerChoice) {
+                    console.log("It's a Tie");
+            }
+
+        }
     
-
+        playRound(humanChoice, computerChoice);
        
     
                     
