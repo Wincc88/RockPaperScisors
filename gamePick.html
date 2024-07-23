@@ -37,51 +37,48 @@
         getComputerChoice(); //use it to call the function to check//
 
         */
+
         
-       
+
+       let playerMove = " ";    // declaring outside the while loop makes it accessible with an empty string
+
+ 
+                   //had to move while above let playerMove...
+                   //... which help the with the continue prompt for valid answeran..
+                  //..and to register and break out when the valid answer is given
+        
+        while (true) {
           
-        let playerMove = prompt("Enter Rock, Paper or Scissors");
-        console.log(playerMove)
+        playerMove = prompt("Enter Rock, Paper or Scissors");
+           //console.log(playerMove)
 
         playerMove = playerMove.charAt(0).toUpperCase() + playerMove.slice(1).toLowerCase();
-        console.log(playerMove);
-
-         if (!(playerMove === "Rock" || playerMove === "Scissors" || playerMove === "Paper")) {
-            alert(prompt("Invalid Entry. Enter Rock, Paper or Scissors"));
+           //console.log(playerMove); 
+        
+        
+            if (!(playerMove === "Rock" || playerMove === "Scissors" || playerMove === "Paper")) {
+                alert(`Invalid Entry; ${playerMove} :Enter Rock, Paper or Scissors`);
+                continue;
+            }   
             
-         }
-      
-       
-        
-        /*    
-          switch(playerMove) {
-            case "Rock":
-                alert( 'You choose Rock' );
-                break;
-               
-            case "Paper":
-                alert( 'You choose Paper' );
-                break;
-            case "Scissors":
-                alert( 'You choose Scissors' );
-                break;
+            else {    
+                break;  
+            }
+            
+        }
+    
+             console.log(playerMove);
 
-            default:
-                alert(prompt("Invalid Entry. Enter Rock, Paper or Scissors"));
-        
-          }
-         */       
        
-
-         
-        /*
+    
         function getHumanChoice() {
-              console.log(playerMove);
               return playerMove;    
         }
         getHumanChoice();
+        console.log(`You chose ${playerMove}`)
+        
 
-        */
+    
 
        
     
