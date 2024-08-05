@@ -77,9 +77,11 @@
         getHumanChoice();
         console.log(`You chose ${playerMove}`)
         
-        
+    
         let humanScore = 0;
         let computerScore = 0;
+    
+        
 
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
@@ -87,50 +89,87 @@
         function playRound(humanChoice, computerChoice) {
             if (humanChoice === "Rock" && computerChoice === "Scissors") {
                 console.log("You Win! Rock beats Scissors");
-                console.log(`humanScore; ${humanScore + 1}, computerScore; ${computerScore + 0}`);
+                //console.log(`humanScore; ${humanScore + 1}, computerScore; ${computerScore + 0}`);
 
             } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
                     console.log("Looooser! Scissors beats Paper");
-                    console.log(`computerScore: ${computerScore + 1}, humanScore; ${humanScore + 0}`);
+                    //console.log(`computerScore: ${computerScore + 1}, humanScore; ${humanScore + 0}`);
                     
 
             } else if (humanChoice === "Paper" && computerChoice === "Rock") {
                     console.log("You Win! Paper beats Rock");
-                    console.log(`humanScore; ${humanScore + 1}, computerScore; ${computerScore + 0}`);
+                    //console.log(`humanScore; ${humanScore + 1}, computerScore; ${computerScore + 0}`);
             
             } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
                     console.log("You Win! Scissors beats Paper");
-                    console.log(`humanScore; ${humanScore + 1}, computerScore; ${computerScore + 0}`);
+                    //console.log(`humanScore; ${humanScore + 1}, computerScore; ${computerScore + 0}`);
             
             } else if (humanChoice === "Scissors" && computerChoice === "Rock") {
                     console.log("Looooser! Rock beats Scissors");
-                    console.log(`computerScore: ${computerScore + 1}, humanScore; ${humanScore + 0}`);
+                    //console.log(`computerScore: ${computerScore + 1}, humanScore; ${humanScore + 0}`);
 
             } else if (humanChoice === "Rock" && computerChoice === "Paper") {
                     console.log("Looooser! Paper beats Rock");
-                    console.log(`computerScore: ${computerScore + 1}, humanScore; ${humanScore + 0}`);
+                    //console.log(`computerScore: ${computerScore + 1}, humanScore; ${humanScore + 0}`);
                 
             } else if (humanChoice === computerChoice) {
                     console.log("It's a Tie");
-                    console.log(`computerScore; ${computerScore}, humanScore; ${humanScore}`);
+                    //console.log(`computerScore; ${computerScore}, humanScore; ${humanScore}`);
 
             }
               
 
         }
-    
+           //for oneRound
         playRound(humanChoice, computerChoice);
-
-          //allRounds = playRound(humanChoice, computerChoice);
+        console.log(humanScore);
+        console.log(computerScore);
+        console.log("yayaya");  
+       
         
+        // This helper function gave more clarity.
+        function scoreIncrease() {
+      
+            if (humanChoice === "Rock" && computerChoice === "Scissors" || 
+                humanChoice === "Paper" && computerChoice === "Rock" || 
+                humanChoice === "Scissors" && computerChoice === "Paper") {
+                    humanScore = humanScore + 1;
+                    computerScore = computerScore + computerScore;
+                    console.log(`humanScore; ${humanScore}, computerScore; ${computerScore}`);
+            }
+            else if (humanChoice === "Paper" && computerChoice === "Scissors" ||
+                    humanChoice === "Scissors" && computerChoice === "Rock" ||
+                    humanChoice === "Rock" && computerChoice === "Paper") {
+                        computerScore = computerScore + 1;
+                        humanScore = humanScore + humanScore;
+                        console.log(`computerScore: ${computerScore}, humanScore; ${humanScore}`);
+            }
+            else if (humanChoice === computerChoice) {
+                humanScore = humanScore;
+                computerScore = computerScore;
+                console.log(`computerScore; ${computerScore}, humanScore; ${humanScore}`);
+            }
+        }
+        scoreIncrease();
+        console.log(humanScore);
+        console.log(computerScore);
+
+        
+           //for more rounds (five here)
         function playGame()  {
-                return playRound(humanChoice, computerChoice);
+            
+             for(let i = 0; i < 4; i++) {
+                playRound(humanChoice, computerChoice);
+                scoreIncrease();
+                 
+             }
+             
         }
         playGame();
-
-        for (let i = 0; i < 5; i++) {
-            console.log(playGame());
-        }
+        console.log(humanScore);
+        console.log(computerScore);
+        
+        
         
     
         
