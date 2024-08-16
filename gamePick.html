@@ -9,29 +9,25 @@
 
        
     <script>
-        console.log("Hello World");
-
-        console.log(23 + 97);
-        
-       
+      
      
         let computerMove = ["Rock", "Paper", "Scissors"];
-        console.log(computerMove) //using it to check//
+        //console.log(computerMove) //using it to check//
 
         let computerLength = computerMove.length; //use to track for random &floor//
-        console.log(computerLength)
+        //console.log(computerLength)
 
         let computerPick = Math.floor(Math.random() *computerMove.length);
-        console.log(computerPick)
+        //console.log(computerPick)
 
         let computerPos = computerMove[computerPick];
-        console.log(computerPos)
+        //console.log(computerPos)
 
 
 
         function getComputerChoice() {
 
-              console.log(computerPos);
+              //console.log(computerPos);
               return computerPos;
         }
         getComputerChoice(); //use it to call the function to check//
@@ -66,8 +62,7 @@
             }
             
         }
-    
-             console.log(playerMove);
+            // console.log(playerMove);
 
        
     
@@ -81,7 +76,6 @@
         let humanScore = 0;
         let computerScore = 0;
     
-        
 
         const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
@@ -122,9 +116,9 @@
         }
            //for oneRound
         playRound(humanChoice, computerChoice);
-        console.log(humanScore);
-        console.log(computerScore);
-        console.log("yayaya");  
+        //console.log(humanScore);
+        //console.log(computerScore);
+        //console.log("yayaya");  
        
         
         // This helper function gave more clarity.
@@ -151,8 +145,8 @@
             }
         }
         scoreIncrease();
-        console.log(humanScore);
-        console.log(computerScore);
+        //console.log(humanScore);
+        //console.log(computerScore);
 
         
            //for more rounds (five here)
