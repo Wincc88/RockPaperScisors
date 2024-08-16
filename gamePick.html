@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> 
+    <button id="rockbtn">Rock</button>
+    <button id="Paperbtn">Paper</button>
+    <button id="Scissorsbtn">Scissors</button>
 
        
     <script>
@@ -36,14 +39,16 @@
         
 
         
-
+                //playerMove commence -- to be replaced with buttons
        let playerMove = " ";    // declaring outside the while loop makes it accessible with an empty string
 
  
                    //had to move while above let playerMove...
                    //... which help the with the continue prompt for valid answeran..
                   //..and to register and break out when the valid answer is given
-        
+
+
+           // this will be removed for buttons
         while (true) {
           
         playerMove = prompt("Enter Rock, Paper or Scissors");
@@ -66,12 +71,14 @@
             // console.log(playerMove);
 
        
-    
+           //fix buttons function here
         function getHumanChoice() {
               return playerMove;    
         }
         getHumanChoice();
         console.log(`You chose ${playerMove}`)
+
+            //playerMove concludes
         
     
         let humanScore = 0;
