@@ -7,8 +7,8 @@
 </head>
 <body> 
     <button id="rockbtn">Rock</button>
-    <button id="Paperbtn">Paper</button>
-    <button id="Scissorsbtn">Scissors</button>
+    <button id="paperbtn">Paper</button>
+    <button id="scissorsbtn">Scissors</button>
 
        
     <script>
@@ -79,7 +79,36 @@
         console.log(`You chose ${playerMove}`)
 
             //playerMove concludes
+      
+
+       
+          // Might combine the the buttons for gethumanChoice()
+        function rockButton() {
+          alert("Rock");
+          console.log("Rock");
+        }
         
+       function paperButton() {
+        alert("Paper");
+        console.log("Paper");
+       }
+
+       function scissorsButton() {
+        alert("Scissors");
+        console.log("Scissors");
+       }
+     
+
+       const rockbtn = document.querySelector("#rockbtn");
+       rockbtn.addEventListener("click", rockButton);
+       
+       const paperbtn = document.querySelector("#paperbtn");
+       paperbtn.addEventListener("click", paperButton);
+
+       const scissorsbtn = document.querySelector("#scissorsbtn");
+       scissorsbtn.addEventListener("click", scissorsButton)
+
+       
     
         let humanScore = 0;
         let computerScore = 0;
