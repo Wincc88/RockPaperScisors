@@ -58,7 +58,7 @@
 
                 updateScore();
 
-                gameWin();
+                gameWinner();
                              
                     });
                             
@@ -128,43 +128,41 @@
                 buttonClicked === "Scissors" && computerChoice === "Paper") {
                     humanScore = humanScore + 1;
                     computerScore = computerScore;
-                    console.log(`humanScore; ${humanScore}, computerScore; ${computerScore}`);
+                    return(`humanScore; ${humanScore}, computerScore; ${computerScore}`);
             }
             else if (buttonClicked === "Paper" && computerChoice === "Scissors" ||
                     buttonClicked === "Scissors" && computerChoice === "Rock" ||
                     buttonClicked === "Rock" && computerChoice === "Paper") {
                         computerScore = computerScore + 1;
                         humanScore = humanScore;
-                        console.log(`computerScore: ${computerScore}, humanScore; ${humanScore}`);
+                        return(`computerScore: ${computerScore}, humanScore; ${humanScore}`);
             }
             else if (buttonClicked === computerChoice) {
                 humanScore = humanScore;
                 computerScore = computerScore;
-                console.log(`computerScore; ${computerScore}, humanScore; ${humanScore}`);
+                return(`computerScore; ${computerScore}, humanScore; ${humanScore}`);
             }
         }
     
         function updateScore() {
             document.getElementById("hScore").textContent = humanScore;
             document.getElementById("cScore").textContent = computerScore;
+            
         }
-      
-        function gameWin() {
+       
+        function gameWinner() {
 
             if (humanScore === 5 && computerScore < 5) {
             console.log("Human = winner");
             document.getElementById("hScore").textContent = "Winner";
             document.getElementById("cScore").textContent = "-";
             
-
             }
             else if (computerScore === 5 && humanScore < 5) {
                 console.log("Computer = winner");
                 document.getElementById("cScore").textContent = "Winner";
                 document.getElementById("hScore").textContent = "-";
-
-            }
-            
+            }  
 
         }
         
