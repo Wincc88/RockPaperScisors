@@ -117,19 +117,19 @@
                 buttonClicked === "Scissors" && computerChoice === "Paper") {
                     humanScore = humanScore + 1;
                     computerScore = computerScore;
-                    return(`humanScore; ${humanScore}, computerScore; ${computerScore}`);
+                    return; //(`humanScore; ${humanScore}, computerScore; ${computerScore}`);
             }
             else if (buttonClicked === "Paper" && computerChoice === "Scissors" ||
                     buttonClicked === "Scissors" && computerChoice === "Rock" ||
                     buttonClicked === "Rock" && computerChoice === "Paper") {
                         computerScore = computerScore + 1;
                         humanScore = humanScore;
-                        return(`computerScore: ${computerScore}, humanScore; ${humanScore}`);
+                        return; //(`computerScore: ${computerScore}, humanScore; ${humanScore}`);
             }
             else if (buttonClicked === computerChoice) {
                 humanScore = humanScore;
                 computerScore = computerScore;
-                return(`computerScore; ${computerScore}, humanScore; ${humanScore}`);
+                return; //(`computerScore; ${computerScore}, humanScore; ${humanScore}`);
             }
         }
     
